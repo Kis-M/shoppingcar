@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CameraMarkView">
+        <attr name="overlay_alpha" format="float"/>
+        <attr name="crop_enabled" format="boolean"/>
+        <attr name="crop_width" format="dimension"/>
+        <attr name="crop_height" format="dimension"/>
+        <attr name="frame_stroke_weight" format="dimension"/>
+        <attr name="frame_color" format="reference|color" />
+        <attr name="flash_enable" format="boolean"/>
+        <attr name="scan_enable" format="boolean"/>
+        <attr name="crop_mode" format="enum" >
+            <enum name="rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="camera_position" format="enum">
+            <enum name="front" value="1" />
+            <enum name="back" value="2" />
+        </attr>
+        <attr name="scan_duration" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SkillView">
+        <attr name="line_width" format="dimension"/>
+        <attr name="bg_color" format="reference|color"/>
+        <attr name="text_color" format="reference|color"/>
+        <attr name="score_color" format="reference|color"/>
+        <attr name="point_color" format="reference|color"/>
+        <attr name="skill_text_size" format="dimension"/>
+        <attr name="max_value" format="integer"/>
+        <attr name="anim_duration" format="integer" />
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CameraView">
+        <attr name="adjustViewBounds" format="boolean"/>
+        <attr name="facing" format="enum">
+            <enum name="back" value="0" />
+            <enum name="front" value="1" />
+        </attr>
+        <attr name="aspectRatio" format="string"/>
+        <attr name="autoFocus" format="boolean"/>
+        <attr name="flash" format="integer"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="bgStrokeWidth" format="dimension" />
+        <attr name="roundColor" format="color|reference"/>
+        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="progressColor" format="color|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="progressValue" format="integer" />
+        <attr name="maxValue" format="integer" />
+        <attr name="centerText" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ArcMenuView">
+        <attr name="spread_radius" format="dimension" />
+        <attr name="menu_width" format="dimension" />
+        <attr name="menu_item_width" format="dimension" />
+        <attr name="duration" format="integer"/>
+        <attr name="can_rotate" format="boolean" />
+        <attr name="menu_drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PayLoadingView">
+        <attr name="pay_load_color" format="color|reference" />
+        <attr name="pay_load_stroke" format="dimension" />
+        <attr name="pay_load_dur" format="integer" />
+        <attr name="pay_result_dur" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="WaveLoadView">
+        <attr name="wave_load_mode" format="enum">
+            <enum name="icon" value="1" />
+            <enum name="color" value="2" />
+        </attr>
+        <attr name="wave_load_auto_load" format="boolean" />
+        <attr name="wave_load_icon" format="reference"/>
+        <attr name="wave_load_color" format="reference|color"/>
+        <attr name="wave_load_show_text" format="boolean"/>
+        <attr name="wave_load_text_size" format="dimension"/>
+        <attr name="wave_load_duration" format="integer"/>
+        <attr name="wave_load_stroke_width" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="BannerView">
+        <attr name="banner_page_margin" format="dimension" />
+        <attr name="banner_auto_scroll" format="boolean"/>
+        <attr name="banner_toggle_duration" format="integer"/>
+        <attr name="banner_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="YRoundelMenu">
+        <attr name="round_menu_roundColor" format="color|reference"/>
+        <attr name="round_menu_centerColor" format="color|reference"/>
+        <attr name="round_menu_expandedRadius" format="dimension"/>
+        <attr name="round_menu_collapsedRadius" format="dimension"/>
+        <attr name="round_menu_duration" format="integer" />
+        <attr name="round_menu_item_anim_delay" format="integer" />
+        <attr name="round_menu_item_width" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="YScratchView">
+        <attr name="scratch_radius" format="dimension" />
+        <attr name="scratch_mark_color" format="color|reference" />
+        <attr name="scratch_drawable" format="reference" />
+        <attr name="scratch_foreground_drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="YSwitchView">
+        <attr name="switch_bar_radius" format="dimension" />
+        <attr name="switch_open_color" format="color|reference" />
+        <attr name="switch_close_color" format="reference" />
+        <attr name="switch_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="YWheelView">
+        <attr name="wheel_item_count" format="integer" />
+        <attr name="wheel_item_select_txt_color" format="color|reference" />
+        <attr name="wheel_item_normal_txt_color" format="color|reference" />
+        <attr name="wheel_item_select_txt_scale" format="float" />
+        <attr name="wheel_item_normal_txt_scale" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="YProfileSlideView">
+        <attr name="profile_slide_corner" format="dimension" />
+        <attr name="profile_slide_width" format="dimension" />
+        <attr name="profile_slide_text_size" format="dimension" />
+        <attr name="profile_slide_auto_slide_time" format="integer" />
+        <attr name="profile_slide_slider_color" format="color|reference" />
+        <attr name="profile_slide_background_color" format="color|reference" />
+        <attr name="profile_slide_progress_color" format="color|reference" />
+        <attr name="profile_slide_tip_text" format="string" />
+        <attr name="profile_slide_padding" format="dimension" />
+    </declare-styleable>
+
+</resources>

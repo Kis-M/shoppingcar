@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ShoppingCar.iml" filepath="$PROJECT_DIR$/.idea/modules/ShoppingCar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ShoppingCar.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ShoppingCar.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/widget/ShoppingCar.widget.iml" filepath="$PROJECT_DIR$/.idea/modules/widget/ShoppingCar.widget.iml" />
+    </modules>
+  </component>
+</project>
