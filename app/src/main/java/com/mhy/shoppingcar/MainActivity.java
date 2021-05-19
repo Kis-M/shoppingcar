@@ -1,5 +1,6 @@
 package com.mhy.shoppingcar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.tv_total_price);
         btn = findViewById(R.id.btn_order);
         imageView.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 isSelect = !isSelect;
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         for (int j = 0; j < FragmentRight2.goods_num.length; j++) {
                             for (int k = 0; k < FragmentRight2.goods_num[j]; k++) {
                                 //id2 += j + 5;
-                                int L =  j + 5;
+                                int L = j + 5;
                                 id2 += "0" + L;
                             }
                             lists.add(FragmentRight2.goods_num[j]);

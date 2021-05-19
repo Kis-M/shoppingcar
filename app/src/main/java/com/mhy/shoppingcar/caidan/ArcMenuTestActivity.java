@@ -119,10 +119,8 @@ public class ArcMenuTestActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.tiancai:
-                finish();
-                break;
+        if (v.getId() == R.id.tiancai) {
+            finish();
         }
     }
 }
