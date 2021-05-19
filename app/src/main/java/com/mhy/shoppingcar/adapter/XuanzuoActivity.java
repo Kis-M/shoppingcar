@@ -21,35 +21,30 @@ public class XuanzuoActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xuanzuo);
-        initView();//初始化控件
-    }
 
-    //初始化控件
-    private void initView() {
         Button btn_link = findViewById(R.id.btn_link);
         et_data = findViewById(R.id.et_data);
         et_renshu = findViewById(R.id.et_renshu);
         btn_link.setOnClickListener(this);
     }
 
+
+
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            //连接
-            case R.id.btn_link:
-                if (et_data.length() != 0 && et_renshu.length() != 0) {
-                    sendData = et_data.getText().toString().trim();//输入的桌号
-                    renshu = et_renshu.getText().toString().trim();//输入的人数
-                    Intent i = new Intent(XuanzuoActivity.this, ArcMenuTestActivity.class);
-                    startActivity(i);
-                    finish();
-                } else if (et_data.length() == 0 && et_renshu.length() != 0){
-                    Toast.makeText(getApplicationContext(), "请输入座位号！", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    Toast.makeText(getApplicationContext(),"请输入人数！",Toast.LENGTH_SHORT).show();
-                }
-                break;
+        //连接
+        if (v.getId() == R.id.btn_link) {
+            if (et_data.length() != 0 && et_renshu.length() != 0) {
+                sendData = et_data.getText().toString().trim();//输入的桌号
+                renshu = et_renshu.getText().toString().trim();//输入的人数
+                Intent i = new Intent(XuanzuoActivity.this, ArcMenuTestActivity.class);
+                startActivity(i);
+                finish();
+            } else if (et_data.length() == 0 && et_renshu.length() != 0) {
+                Toast.makeText(getApplicationContext(), "请输入座位号！", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "请输入人数！", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
