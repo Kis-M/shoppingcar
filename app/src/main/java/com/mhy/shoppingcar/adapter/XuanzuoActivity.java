@@ -14,7 +14,7 @@ import com.mhy.shoppingcar.caidan.ArcMenuTestActivity;
 
 public class XuanzuoActivity extends AppCompatActivity implements View.OnClickListener {
     public static String sendData, renshu;//调用全局数据变量，方便调用
-    private EditText  et_data, et_renshu;
+    private EditText et_data, et_renshu;
 
 
     @Override
@@ -27,7 +27,6 @@ public class XuanzuoActivity extends AppCompatActivity implements View.OnClickLi
         et_renshu = findViewById(R.id.et_renshu);
         btn_link.setOnClickListener(this);
     }
-
 
 
     @Override

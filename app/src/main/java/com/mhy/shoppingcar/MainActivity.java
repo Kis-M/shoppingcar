@@ -67,14 +67,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ArrayList<Integer> lists = new ArrayList();
-                String id2 = new String(sendData);
-                id2 = "A" + id2 + "!" + renshu + "&";
+                StringBuilder id2 = new StringBuilder(new String(sendData));
+                id2 = new StringBuilder("A" + id2 + "!" + renshu + "&");
                 for (int i = 0; i < FragmentLeft.goodslb.length; i++) {
                     if (i == 0) {
                         for (int j = 0; j < FragmentRight1.goods_num.length; j++) {
                             for (int k = 0; k < FragmentRight1.goods_num[j]; k++) {
                                 //id2 += j;
-                                id2 += "0" + j;
+                                id2.append("0").append(j);
                             }
                             lists.add(FragmentRight1.goods_num[j]);
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                             for (int k = 0; k < FragmentRight2.goods_num[j]; k++) {
                                 //id2 += j + 5;
                                 int L = j + 5;
-                                id2 += "0" + L;
+                                id2.append("0").append(L);
                             }
                             lists.add(FragmentRight2.goods_num[j]);
                         }
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                         for (int j = 0; j < FragmentRight3.goods_num.length; j++) {
                             for (int k = 0; k < FragmentRight3.goods_num[j]; k++) {
                                 //id2 += j;
-                                id2 += "1" + j;
+                                id2.append("1").append(j);
                             }
                             lists.add(FragmentRight3.goods_num[j]);
                         }
@@ -103,19 +103,19 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (total_price > 0) {//如果有被选中的
-                    if (!id2.isEmpty()) {
+                    if (id2.length() > 0) {
                         //让Double类型完整显示，不用科学计数法显示大写字母E
                         DecimalFormat decimalFormat = new DecimalFormat("0.00");
-                        id2 = id2 + "#" + (decimalFormat.format(total_price));
-                        new SendAsyncTask().execute(id2);
-                        Log.d("ttt", id2);
+                        id2.append("#").append(decimalFormat.format(total_price));
+                        new SendAsyncTask().execute(id2.toString());
+                        Log.d("ttt", id2.toString());
                         ToastUtil.makeText(MainActivity.this, "订单已提交，请耐心等待上菜");
-                        Intent inte = new Intent();
-                        inte.putIntegerArrayListExtra("goods", lists);
-                        inte.putExtra("name", total_price);
-                        inte.setAction("testskippage.intent.action.skip");
-                        inte.addCategory("testskippage.intent.category.skip");
-                        startActivity(inte);
+                        Intent inter = new Intent();
+                        inter.putIntegerArrayListExtra("goods", lists);
+                        inter.putExtra("name", total_price);
+                        inter.setAction("testskippage.intent.action.skip");
+                        inter.addCategory("testskippage.intent.category.skip");
+                        startActivity(inter);
                     } else {
                         ToastUtil.makeText(MainActivity.this, "请选择要购买的商品");
                     }
